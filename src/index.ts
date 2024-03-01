@@ -27,7 +27,7 @@ async function startConsumer() {
         const total = parseInt(payment.amount); 
         console.log("Pago recibido: ", payment);
         try {
-          await axios.post(process.env.RECEIPT_URL || "", {
+          await axios.post(process.env.RECEIPT_URL || "https://api1-ujlz.onrender.com", {
             total: total
           });
           console.log("Pago enviado al servicio de pagos");
